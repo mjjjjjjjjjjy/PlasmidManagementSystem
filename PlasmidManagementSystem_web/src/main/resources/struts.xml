@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<!-- 设置上传文件的总大小，默认是2M  struts.multipart.maxSize=2097152 -->
+	<constant name="struts.multipart.maxSize" value="20971520"/>
+	
+	<!-- 先配置包结构 -->
+	<package name="crm" extends="struts-default" namespace="/">
+		
+		<!-- 配置拦截器 -->
+		<interceptors>
+			<interceptor name="userInterceptor" class="com.mo.plasmid.interceptor.UserInterceptor"/>
+		</interceptors>
+	
+		<!-- 配置全局的结果页面 -->
+		<global-results>
+			<result name="login" type="redirect">/login.jsp</result>
+		</global-results>
+		<!-- 质粒模块 -->
+		<action name="plasmid_*" class="plasmidAction" method="{1}">
+			<result>/index.jsp</result>
+			<result name="findAll">/findAll.jsp</result>
+			<result name="pageBean">/jsp/plasmid/pageBean.jsp</result>
+			<result name="delete">/jsp/plasmid/pageBean.jsp</result>
+			<result name="initUpdate">/update.jsp</result>
+			<result name="update" >/jsp/plasmid/pageBean.jsp</result>
+			<!-- 配置拦截器 -->
+			<interceptor-ref name="userInterceptor"/>
+			<interceptor-ref name="defaultStack"/>
+			
+		</action>
+		<!-- 字典模块 -->
+		<action name="dict_*" class="dictAction" method="{1}">
+			<result>/jsp/dict/add.jsp</result>
+			<result name="findAll">/jsp/dict/add.jsp</result>
+			<!-- 配置拦截器 -->
+			<interceptor-ref name="userInterceptor"/>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		<!-- 配种用户模块 -->
+		<action name="user_*" class="userAction" method="{1}">
+			<result name="checkCode">/regist.jsp</result>
+			<result name="login">/login.jsp</result>
+			<!-- 配置拦截器 -->
+			<interceptor-ref name="userInterceptor">
+				<param name="excludeMethods">regist,checkCode,login,exit</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"/>
+		</action>
+		
+		
+	</package>
+    
+</struts>
+
+
+
+
+
+
+
+
+
+
+
+
+

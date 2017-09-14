@@ -1,0 +1,6 @@
+com/mo/plasmid/dao/PlasmidDaoImpl.class
+com/mo/plasmid/dao/BaseDaoImpl.class
+com/mo/plasmid/domain/Plasmid.class
+com/mo/plasmid/dao/PlasmidDao.class
+com/mo/plasmid/domain/PageBean.class
+com/mo/plasmid/dao/BaseDao.class

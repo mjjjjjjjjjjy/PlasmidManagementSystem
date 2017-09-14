@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.mo.plasmid.domain.Plasmid" table="plasmid">
+		<id name="p_id" column="p_id">
+			<generator class="native"></generator>
+		</id>
+		<property name="p_plasmidNumber" column="p_plasmidNumber"/>
+ 		<!-- <property name="p_constructor" column="p_constructor"/> -->
+		<!-- <property name="p_ruku" column="p_ruku"/> -->
+		<property name="p_name" column="p_name"/>
+		<!-- <property name="p_vector" column="p_vector"/> -->
+		<property name="p_date" column="p_date"/>
+		<property name="p_time" column="p_time"/>
+		<property name="p_description" column="p_description"/>
+		<property name="p_note" column="p_note"/>
+		<!-- 多对一配置 -->
+		<many-to-one name="vector" class="com.mo.plasmid.domain.Dict" column="p_vector"></many-to-one>
+		<many-to-one name="constructor" class="com.mo.plasmid.domain.Dict" column="p_constructor"></many-to-one>
+		<many-to-one name="ruku" class="com.mo.plasmid.domain.Dict" column="p_ruku"></many-to-one>
+	</class>
+
+</hibernate-mapping>

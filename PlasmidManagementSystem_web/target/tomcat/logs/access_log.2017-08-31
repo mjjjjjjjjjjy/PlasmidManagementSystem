@@ -1,0 +1,11 @@
+0:0:0:0:0:0:0:1 - - [31/Aug/2017:22:40:55 +0800] "POST /plasmid/plasmid_save.action HTTP/1.1" 200 1007 http-bio-8082-exec-1 1462
+0:0:0:0:0:0:0:1 - - [31/Aug/2017:22:41:10 +0800] "POST /plasmid/plasmid_save.action HTTP/1.1" 200 1007 http-bio-8082-exec-2 14
+0:0:0:0:0:0:0:1 - - [31/Aug/2017:22:41:21 +0800] "POST /plasmid/plasmid_save.action HTTP/1.1" 200 1007 http-bio-8082-exec-3 10
+0:0:0:0:0:0:0:1 - - [31/Aug/2017:22:42:23 +0800] "POST /plasmid/plasmid_save.action HTTP/1.1" 200 1007 http-bio-8082-exec-3 1122
+0:0:0:0:0:0:0:1 - - [31/Aug/2017:22:42:23 +0800] "POST /plasmid/plasmid_save.action HTTP/1.1" 200 1007 http-bio-8082-exec-1 1123
+0:0:0:0:0:0:0:1 - - [31/Aug/2017:22:42:23 +0800] "POST /plasmid/plasmid_save.action HTTP/1.1" 200 1007 http-bio-8082-exec-2 1123
+0:0:0:0:0:0:0:1 - - [31/Aug/2017:22:42:23 +0800] "POST /plasmid/plasmid_save.action HTTP/1.1" 200 1007 http-bio-8082-exec-5 1124
+0:0:0:0:0:0:0:1 - - [31/Aug/2017:22:42:23 +0800] "POST /plasmid/plasmid_save.action HTTP/1.1" 200 1007 http-bio-8082-exec-4 1152
+0:0:0:0:0:0:0:1 - - [31/Aug/2017:22:43:59 +0800] "POST /plasmid/plasmid_save.action HTTP/1.1" 200 1007 http-bio-8082-exec-3 12
+0:0:0:0:0:0:0:1 - - [31/Aug/2017:23:21:50 +0800] "POST /plasmid/plasmid_save.action HTTP/1.1" 404 - http-bio-8082-exec-1 0
+0:0:0:0:0:0:0:1 - - [31/Aug/2017:23:27:34 +0800] "POST /plasmid/plasmid_save.action HTTP/1.1" 200 1007 http-bio-8082-exec-1 875

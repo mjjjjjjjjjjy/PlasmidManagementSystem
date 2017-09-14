@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd">
+	
+	<!-- 开启注解的扫描 -->
+	<context:component-scan base-package="com.mo"/>
+
+	<!-- 先配置平台事务管理器 -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<!-- 开启事务的注解 -->
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	
+	<!-- 配置plasmid模块 -->
+	<bean id="plasmidService" class="com.mo.plasmid.service.PlasmidServiceImpl">
+		<property name="plasmidDao" ref="plasmidDao"></property>
+	</bean>
+	<!-- 配置Dict模块 -->
+	<bean id="dictService" class="com.mo.plasmid.service.DictServiceImpl">
+		<property name="dictDao" ref="dictDao"></property>
+	</bean>
+	<!-- 配置User模块 -->
+	<bean id="userService" class="com.mo.plasmid.service.UserServiceImpl">
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+	
+</beans>
