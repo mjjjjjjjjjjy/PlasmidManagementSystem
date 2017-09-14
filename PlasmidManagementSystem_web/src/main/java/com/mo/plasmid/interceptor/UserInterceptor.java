@@ -11,7 +11,7 @@ public class UserInterceptor extends MethodFilterInterceptor {
 	
 	private static final long serialVersionUID = -4531945212399365976L;
 
-	@Override
+	//登陆控制
 	protected String doIntercept(ActionInvocation invocation) throws Exception {
 		Object object = ServletActionContext.getRequest().getSession().getAttribute("loginUser");
 		if (object==null) {

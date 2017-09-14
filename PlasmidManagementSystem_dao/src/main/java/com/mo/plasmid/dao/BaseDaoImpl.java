@@ -12,7 +12,7 @@ import com.mo.plasmid.domain.PageBean;
 
 
 /**
- * 以后所有的Dao成的实现类，都可以继承BaseDaoImpl，增删改查分页方法不用再编写了
+ * 所有的Dao成的实现类，都可以继承BaseDaoImpl，增删改查分页方法不用再编写了
  * @author Administrator
  * @param <T>
  */

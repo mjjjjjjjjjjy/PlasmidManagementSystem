@@ -9,7 +9,7 @@ import com.mo.plasmid.domain.PageBean;
 
 
 /**
- * 以后所有的DAO的接口都需要继承BaseDao接口
+ * 所有的DAO的接口都需要继承BaseDao接口
  * 自定义泛型接口
  * @author Administrator
  */

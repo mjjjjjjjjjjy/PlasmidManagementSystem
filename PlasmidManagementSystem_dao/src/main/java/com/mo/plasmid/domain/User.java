@@ -1,9 +1,11 @@
 package com.mo.plasmid.domain;
 
 public class User {
+	
 	private Long user_id;
 	private String user_code;
 	private String user_password;
+	
 	public Long getUser_id() {
 		return user_id;
 	}

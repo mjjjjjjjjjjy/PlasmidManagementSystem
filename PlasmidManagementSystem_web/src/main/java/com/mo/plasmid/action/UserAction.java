@@ -18,6 +18,7 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ModelDriven;
 
 public class UserAction extends BaseAction implements ModelDriven<User> {
+	
 	private static final long serialVersionUID = -7901684097522086819L;
 	
 	User user = new User();

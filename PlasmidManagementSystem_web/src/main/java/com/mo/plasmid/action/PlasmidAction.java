@@ -16,6 +16,7 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
 public class PlasmidAction extends BaseAction implements ModelDriven<Plasmid> {
+	
 	private static final long serialVersionUID = -230768583472318174L;
 
 	public Plasmid plasmid = new Plasmid();

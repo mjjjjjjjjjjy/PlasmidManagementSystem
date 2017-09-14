@@ -8,6 +8,7 @@ import com.mo.plasmid.domain.PageBean;
 import com.mo.plasmid.domain.Plasmid;
 
 public interface PlasmidService {
+	
 	public void save(Plasmid plasmid);
 
 	public List<Plasmid> fandAll();
