@@ -129,6 +129,9 @@
 			备注
 		</td>
 		<td>
+			序列附件
+		</td>
+		<td>
 			操作
 		</td>
 		
@@ -164,6 +167,11 @@
 		</td>
 		<td>
 			<s:property value="#name.p_note"/><br>
+		</td>
+		<td>
+			<s:if test="#name.p_filePath.length()>0">
+				<a href="${pageContext.request.contextPath }/plasmid_downloadFile.action?p_id=${name.p_id}">下载</a>
+			</s:if>
 		</td>
 		<td>
 		<a href="${pageContext.request.contextPath }/plasmid_initUpdate.action?p_id=${name.p_id}">修改</a>

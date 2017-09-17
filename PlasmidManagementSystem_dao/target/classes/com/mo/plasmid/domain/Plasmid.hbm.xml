@@ -16,6 +16,8 @@
 		<property name="p_time" column="p_time"/>
 		<property name="p_description" column="p_description"/>
 		<property name="p_note" column="p_note"/>
+		<property name="p_filePath" column="p_filePath"></property>
+		<property name="p_uploadFileName" column="p_uploadFileName"></property>
 		<!-- 多对一配置 -->
 		<many-to-one name="vector" class="com.mo.plasmid.domain.Dict" column="p_vector"></many-to-one>
 		<many-to-one name="constructor" class="com.mo.plasmid.domain.Dict" column="p_constructor"></many-to-one>

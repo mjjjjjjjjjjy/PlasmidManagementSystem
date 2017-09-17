@@ -1,5 +1,6 @@
 package com.mo.plasmid.test;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -18,7 +19,7 @@ import com.mo.plasmid.service.PlasmidService;
 public class WebTest {
 	
 	@Test
-	public void test()
+	public void test() throws IOException
 	{
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		PlasmidAction plasmidAction = (PlasmidAction) context.getBean("plasmidAction"); 
@@ -46,7 +47,7 @@ public class WebTest {
 	}
 	
 	@Test
-	public void TestWeb3(){
+	public void TestWeb3() throws IOException{
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		PlasmidAction plasmidAction = (PlasmidAction) context.getBean("plasmidAction"); 
 		plasmidAction.save();

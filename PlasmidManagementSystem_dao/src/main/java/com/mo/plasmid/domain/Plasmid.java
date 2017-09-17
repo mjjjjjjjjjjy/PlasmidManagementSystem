@@ -27,6 +27,18 @@ public class Plasmid {
 	private String p_description;
 	private String p_note;
 	
+	//上传文件路径
+	private String p_filePath;
+	private String p_uploadFileName;
+
+	public String getP_filePath() {
+		return p_filePath;
+	}
+
+	public void setP_filePath(String p_filePath) {
+		this.p_filePath = p_filePath;
+	}
+
 	public Long getP_id() {
 		return p_id;
 	}
@@ -111,8 +123,22 @@ public class Plasmid {
 	public String toString() {
 		return "Plasmid [p_id=" + p_id + ", p_plasmidNumber=" + p_plasmidNumber + ", p_name=" + p_name + ", vector="
 				+ vector + ", constructor=" + constructor + ", ruku=" + ruku + ", p_date=" + p_date + ", p_time="
-				+ p_time + ", p_description=" + p_description + ", p_note=" + p_note + "]";
+				+ p_time + ", p_description=" + p_description + ", p_note=" + p_note + ", p_filePath=" + p_filePath
+				+ "]";
 	}
+
+	public String getP_uploadFileName() {
+		return p_uploadFileName;
+	}
+
+	public void setP_uploadFileName(String p_uploadFileName) {
+		this.p_uploadFileName = p_uploadFileName;
+	}
+
+	
+
+	
+	
 	
 	
 }

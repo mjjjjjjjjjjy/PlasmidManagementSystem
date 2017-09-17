@@ -27,6 +27,16 @@
 			<result name="delete">/jsp/plasmid/pageBean.jsp</result>
 			<result name="initUpdate">/update.jsp</result>
 			<result name="update" >/jsp/plasmid/pageBean.jsp</result>
+			<result name="save" >/jsp/plasmid/add.jsp</result>
+			<!-- 下载相关 -->
+			<result name="download" type="stream">
+				<!-- inputName参数值为返回值为InputStream的方法名去掉get以及第一个字母小写 -->
+				<param name="inputName">downloadFile</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="bufferSize">4096</param>
+				<param name="contentDisposition">attachment; fileName="${uploadFileName}"</param>
+			</result>
+			
 			<!-- 配置拦截器 -->
 			<interceptor-ref name="userInterceptor"/>
 			<interceptor-ref name="defaultStack"/>

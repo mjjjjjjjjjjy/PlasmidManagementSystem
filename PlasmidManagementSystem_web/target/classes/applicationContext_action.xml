@@ -16,6 +16,8 @@
 	<!-- 配置PlismidAction -->
 	<bean id="plasmidAction" class="com.mo.plasmid.action.PlasmidAction">
 		<property name="plasmidService" ref="plasmidService"/>
+		<!-- 配置上传附件存放地址 -->
+		<property name="savePath" value="/Users/mojianyue/Documents/java/uploadFile_test/"/>
 	</bean>
 	<!-- 配置DictAction -->
 	<bean id="dictAction" class="com.mo.plasmid.action.DictAction">

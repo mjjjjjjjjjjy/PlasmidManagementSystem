@@ -88,7 +88,7 @@
 <title>登陆</title>
 </head>
 <body>
-<%-- <s:debug/> --%>
+<s:debug/>
 
 <span id="loginStatus"></span>
 <form action="${pageContext.request.contextPath}/user_login.action" onsubmit="return checkForm()" method="post">

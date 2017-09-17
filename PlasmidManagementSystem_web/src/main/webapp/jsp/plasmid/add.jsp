@@ -52,14 +52,15 @@
 
 <jsp:include page="${pageContest.request.contextPath}/menu.jsp"></jsp:include>
 
-<FORM id="plasmidForm" name="plasmidForm" action="${pageContext.request.contextPath }/plasmid_save.action" method=post>
+<FORM id="plasmidForm" name="plasmidForm" action="${pageContext.request.contextPath }/plasmid_save.action" method="post" enctype="multipart/form-data"  >
 	质粒编号：<input id="p_plasmidNumber" name="p_plasmidNumber" type="text" ><br/>
 	质粒名称：<input id="p_name" name="p_name" type="text" ><br/>
  	载体名称：<select id="vector" name="vector.dict_id"></select><br/>
 	构建人：<select id="constructor" name="constructor.dict_id" ></select> <br/>
 	入库人：<select id="ruku" name="ruku.dict_id"></select> <br/>
 	描   述：<input id="p_description" name="p_description" type="text" ><br/>
-	备   注：<input id="p_note" name="p_note" type="text" ><br/>	
+	备   注：<input id="p_note" name="p_note" type="text" ><br/>
+	附件：<input id="upload" name="upload" type="file" value="上传序列"><br>	
 	<button type="submit">提交</button>	
 </FORM>
 
